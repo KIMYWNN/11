@@ -1,18 +1,19 @@
 #include <stdio.h>
-int main(void)
-{
-    char *pc;
-    int *pi;
-    double *pd;
+int main(void) {
+    int i = 10;
+    char c = 'a';
 
-    pc = (char *)10000;
-    pi = (int *)10000;
-    pd = (double *)10000;
-    printf("증가 전 : pc = %d, pi = %d, pd = %d\n", (int)pc, (int)pi, (int)pd);
+    int *iptr;          
+    iptr = &i;         
+    char *cptr;         
+    cptr = &c;         
+    int *iptr2;         
+    iptr2 = iptr;       
 
-    pc++;
-    pi++;
-    pd++;
-    printf("증가 후 : pc = %d, pi = %d, pd = %d\n", (int)pc, (int)pi, (int)pd);
+    printf("i : %p\n%p (size:%i)\n", iptr, &i, sizeof(iptr));
+    printf("c : %p\n%p (size:%i)\n", cptr, &c, sizeof(cptr));
+    printf("iptr2 : %p, %i\n", iptr2, *iptr2);
     return 0;
 }
+
+
