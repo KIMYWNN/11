@@ -6,4 +6,3 @@ int main(void) {
     printf("%i, %i, %i\n", i, *pi, *pc);
     return 0;
 }
-
